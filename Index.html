@@ -1,0 +1,208 @@
+<!Doctype HTML>
+<html >
+  <head >
+    <style >
+    @keyframes balls{
+      0%{left:0%;}
+      100%{left:100%;}
+    }
+      #balls{
+        top:50%;
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        border: solid black 2px;
+        border-radius: 150px;
+        box-shadow: 20px 20px 20px black;
+        color: red;
+        background-color: red;
+        background-image: @url('Balls.png');
+        
+      }
+      .newblass{
+        animation:balls 2s linear infinite;
+        top:50%;
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        border: solid black 2px;
+        border-radius: 150px;
+        box-shadow: 20px 20px 20px black;
+        color: red;
+        background-color: red;
+        background-image: @url('Balls.png');
+      }
+    </style>
+  </head>
+  <body id="BODY">
+    <button onclick="run()" style="width:200px; height:100px;">Run</button>
+     <button onclick="stop()" style="width:200px; height:100px;">Stop</button>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+     <h3 id="balls"> </h3>
+          <button onclick="add()" style="width:200px; height:100px;">Add</button>
+  </body>
+</html>
+<script >
+    var make ="start";
+    var count = 0;
+    var topStyle = 0;
+    var one = "stop";
+    var two = "stop";
+    var three = "stop";
+    var four = "stop";
+    var five = "stop";
+    var click = 0;
+  function run(){
+    setInterval(function run(){
+      count+=10000;
+      if(make === "start"){
+      localStorage.setItem("lagcaude",count);
+      newBalls = document.createElement("H3");
+      newBalls.className = "newblass"
+      document.getElementById("BODY").appendChild(newBalls);
+      runBalls();
+      }
+    },1)
+  }
+  function stop(){
+    make="stop";
+  }
+  function runBalls(){
+    if(one === "start"){
+      newBallo = document.createElement("H3");
+      newBallo.className = "newblass"
+      document.getElementById("BODY").appendChild(newBallo);
+    }
+    if(two === "start"){
+      newBallt = document.createElement("H3");
+      newBallt.className = "newblass"
+      document.getElementById("BODY").appendChild(newBallt);
+    }
+    if(three === "start"){
+      newBallth = document.createElement("H3");
+      newBallth.className = "newblass"
+      document.getElementById("BODY").appendChild(newBallth);
+    }
+    if(four === "start"){
+      newBallf = document.createElement("H3");
+      newBallf.className = "newblass"
+      document.getElementById("BODY").appendChild(newBallf);
+    }
+    if(five === "start"){
+      newBallfi = document.createElement("H3");
+      newBallfi.className = "newblass"
+      document.getElementById("BODY").appendChild(newBallfi);
+    }
+    if(topStyle <= 99){
+      topStyle+=1
+    }
+    if(topStyle >= 99){
+      topStyle=0;
+    }
+    document.getElementById("balls").style.top=topStyle+"%";
+  }
+  function add(){
+    
+    click += 1;
+    if(click === 1){
+      one="start"
+    }
+    if(click === 2){
+      two="start"
+    }
+    if(click === 3){
+      three="start"
+    }
+    if(click === 4){
+      four="start"
+    }
+    if(click === 5){
+      five="start"
+    }
+  }
+</script>
